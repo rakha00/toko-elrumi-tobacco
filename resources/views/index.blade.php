@@ -133,9 +133,9 @@
             <div class="grid grid-cols-1 gap-5 px-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8 md:px-16 lg:grid-cols-4 lg:gap-10 lg:px-28 xl:grid-cols-5">
                 @foreach ($products as $product)
                     <div class="produk-card flex flex-col items-center">
-                        <img class="w-36 rounded-lg sm:w-40 md:w-44 lg:w-48" src="{{ asset('storage/img/produk/' . $product->image) }}" alt="{{ $product->name }}" />
+                        <img class="w-36 rounded-lg sm:w-40 md:w-44 lg:w-48" src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" />
                         <h3 class="mt-3 text-xl font-bold text-white md:text-2xl">{{ $product->name }}</h3>
-                        <p class="text-base text-white md:text-lg">IDR {{ number_format($product->price, 0, ',', '.') }}/kg</p>
+                        <p class="text-base text-white md:text-lg">IDR {{ number_format($product->price, 0, ',', '.') }}</p>
                     </div>
                 @endforeach
             </div>
@@ -152,7 +152,7 @@
                     <div class="flex h-[400px] w-full flex-col items-center justify-between rounded-lg border border-white p-3 md:p-5">
                         <livewire:add-to-cart-button :product="$product" />
                         <div class="flex h-48 w-48 items-center justify-center">
-                            <img class="h-full w-full rounded-lg object-contain" src="{{ asset('storage/img/produk/' . $product->image) }}" alt="{{ $product->name }}" />
+                            <img class="h-full w-full rounded-lg object-contain" src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" />
                         </div>
                         <div class="products-content text-center">
                             <h3 class="text-lg font-bold text-white md:text-xl">{{ $product->name }}</h3>

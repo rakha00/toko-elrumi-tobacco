@@ -9,7 +9,7 @@
         @foreach ($cartItems as $item)
             <div class="mb-2 flex flex-col border-b p-2 sm:flex-row sm:items-center sm:justify-between">
                 <div class="mb-2 flex items-center gap-2 sm:mb-0">
-                    <img class="h-10 w-10 rounded sm:h-12 sm:w-12 md:h-16 md:w-16" src="{{ asset('storage/img/produk/' . $item->product->image) }}" alt="{{ $item->product->name }}">
+                    <img class="h-10 w-10 rounded sm:h-12 sm:w-12 md:h-16 md:w-16" src="{{ asset('storage/' . $item->product->image) }}" alt="{{ $item->product->name }}">
                     <div>
                         <h3 class="text-sm text-gray-800 sm:text-base md:text-lg">{{ $item->product->name }}</h3>
                         <p class="text-xs text-gray-600 sm:text-sm md:text-base">Rp. {{ number_format($item->product->price, 0, ',', '.') }}</p>

@@ -18,44 +18,54 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
         Product::factory()->create([
             'name' => 'Grand Royal Samsu',
-            'image' => 'grand-royal-samsu.png',
+            'image' => 'img/produk/grand-royal-samsu.png',
             'price' => 155000,
         ]);
         Product::factory()->create([
             'name' => 'Grand Royal Mild',
-            'image' => 'grand-royal-mild.png',
+            'image' => 'img/produk/grand-royal-mild.png',
             'price' => 130000,
         ]);
         Product::factory()->create([
             'name' => 'Busa Filter',
-            'image' => 'busa-filter.jpg',
+            'image' => 'img/produk/busa-filter.jpg',
             'price' => 5000,
         ]);
         Product::factory()->create([
             'name' => 'Peralatan Linting',
-            'image' => 'peralatan-linting.png',
+            'image' => 'img/produk/peralatan-linting.png',
             'price' => 15000,
         ]);
         Product::factory()->create([
             'name' => 'Tiga Putri Cap Jago',
-            'image' => 'tiga-putri-cap-jago.png',
+            'image' => 'img/produk/tiga-putri-cap-jago.png',
             'price' => 75000,
         ]);
         Product::factory()->create([
             'name' => 'Tiga Putri Cap Nona',
-            'image' => 'tiga-putri-cap-nona.png',
+            'image' => 'img/produk/tiga-putri-cap-nona.png',
             'price' => 45000,
         ]);
         Product::factory()->create([
             'name' => 'Kertas Papir',
-            'image' => 'kertas-papir.png',
+            'image' => 'img/produk/kertas-papir.png',
             'price' => 3000,
         ]);
 
         User::factory()->create([
             'name' => 'admin',
             'email' => 'admin@gmail.com',
+            'phone' => '081234567890',
+            'role' => 'Admin',
             'password' => Hash::make('admin123'),
+        ]);
+
+        User::factory()->create([
+            'name' => 'user',
+            'email' => 'user@gmail.com',
+            'phone' => '081234567899',
+            'role' => 'User',
+            'password' => Hash::make('user123'),
         ]);
     }
 }

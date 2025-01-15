@@ -81,6 +81,7 @@ class ShoppingCart extends Component
             })->toArray(),
             'customer_details' => array(
                 'first_name' => Auth::user()->name,
+                'phone' => Auth::user()->phone,
                 'email' => Auth::user()->email,
             ),
         );

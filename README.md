@@ -16,7 +16,7 @@ Aplikasi e-commerce untuk toko rokok dengan integrasi pembayaran Midtrans.
 2. Salin file `.env.example` menjadi `.env` dengan perintah `cp .env.example .env`
 3. Generate application key dengan perintah `php artisan key:generate`
 4. Jalankan perintah `composer install` untuk menginstal dependensi
-5. Jalankan perintah `npm install` untuk menginstal dependensi JavaScript
+5. Jalankan perintah `npm install && npm run build` untuk menginstal dependensi JavaScript
 6. Jalankan perintah `php artisan migrate` untuk membuat tabel database
 7. Jalankan perintah `php artisan db:seed` untuk mengisi tabel database dengan data awal
 8. Jalankan perintah `composer run dev` untuk menjalankan aplikasi

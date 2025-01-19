@@ -180,25 +180,47 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.5462597991836!2d106.82725669999995!3d-6.452245799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69eb61e89ece0f%3A0x243a01d307970ab0!2sELRUMI%20TOBACCO%20(Toko%20tembakau%20depok)!5e0!3m2!1sid!2sid!4v1722233807081!5m2!1sid!2sid"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-                <form class="w-full rounded-lg bg-gray-800 p-5 text-center md:w-1/2 md:p-10" action="">
-                    <div class="flex items-center gap-4 pt-3 md:pt-5">
-                        <x-feathericon-user class="text-white" />
-                        <input class="w-full rounded-md p-2 text-sm md:text-base" type="text" placeholder="Nama" />
+                <div class="w-full rounded-lg bg-gray-800 p-8 shadow-xl transition-all duration-300 hover:bg-gray-700 md:w-1/2">
+                    <h3 class="mb-6 text-2xl font-bold text-orange-500">Informasi Kontak</h3>
+
+                    <div class="space-y-6">
+                        <div class="overflow-hidden rounded-lg bg-gray-700 p-4 transition-transform hover:-translate-y-1">
+                            <div class="flex items-center gap-4">
+                                <div class="rounded-full bg-orange-500 p-3">
+                                    <x-feathericon-user class="h-6 w-6 text-white" />
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-sm text-white">Nama</p>
+                                    <p class="text-base font-medium text-white md:text-lg">Muhammad Fatih Athallah</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden rounded-lg bg-gray-700 p-4 transition-transform hover:-translate-y-1">
+                            <div class="flex items-center gap-4">
+                                <div class="rounded-full bg-orange-500 p-3">
+                                    <x-feathericon-mail class="h-6 w-6 text-white" />
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-sm text-white">Email</p>
+                                    <p class="text-base font-medium text-white md:text-lg">fatihathallah26@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="overflow-hidden rounded-lg bg-gray-700 p-4 transition-transform hover:-translate-y-1">
+                            <div class="flex items-center gap-4">
+                                <div class="rounded-full bg-orange-500 p-3">
+                                    <x-feathericon-phone class="h-6 w-6 text-white" />
+                                </div>
+                                <div class="text-left">
+                                    <p class="text-sm text-white">Telepon</p>
+                                    <p class="text-base font-medium text-white md:text-lg">089516129537</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-4 pt-3 md:pt-5">
-                        <x-feathericon-mail class="text-white" />
-                        <input class="w-full rounded-md p-2 text-sm md:text-base" type="text" placeholder="Email" />
-                    </div>
-                    <div class="flex items-center gap-4 pt-3 md:pt-5">
-                        <x-feathericon-phone class="text-white" />
-                        <input class="w-full rounded-md p-2 text-sm md:text-base" type="text" placeholder="No HP" />
-                    </div>
-                    <div class="flex items-center gap-4 pt-3 md:pt-5">
-                        <x-feathericon-message-square class="text-white" />
-                        <textarea class="w-full rounded-md p-2 text-sm md:text-base" placeholder="Pesan" rows="5"></textarea>
-                    </div>
-                    <button class="mt-3 rounded-md bg-orange-500 px-6 py-3 text-base font-bold text-white hover:bg-orange-600 md:mt-5 md:px-8 md:py-4 md:text-xl" type="submit">Kirim Pesan</button>
-                </form>
+                </div>
             </div>
         </section>
         <!--Contact Section end-->

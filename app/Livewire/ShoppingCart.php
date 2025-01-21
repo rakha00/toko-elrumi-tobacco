@@ -32,6 +32,7 @@ class ShoppingCart extends Component
         $this->totalPrice = $this->cartItems->sum(function ($item) {
             return $item->product->price * $item->quantity;
         });
+        $this->dispatch('cartUpdated');
     }
 
     public function decrement($productId)
@@ -46,6 +47,7 @@ class ShoppingCart extends Component
         $this->totalPrice = $this->cartItems->sum(function ($item) {
             return $item->product->price * $item->quantity;
         });
+        $this->dispatch('cartUpdated');
     }
 
     public function clearCart()
@@ -53,6 +55,7 @@ class ShoppingCart extends Component
         Cart::where('user_id', Auth::user()->id)->delete();
         $this->cartItems = collect([]);
         $this->totalPrice = 0;
+        $this->dispatch('cartUpdated');
     }
 
     public function checkout()
@@ -88,6 +91,7 @@ class ShoppingCart extends Component
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
         $this->dispatch('snapToken', snapToken: $snapToken, items: $this->cartItems);
+        $this->clearCart();
     }
 
     public function render()

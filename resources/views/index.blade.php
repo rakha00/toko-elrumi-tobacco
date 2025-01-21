@@ -37,11 +37,12 @@
                     </div>
 
                     <div class="flex items-center gap-5">
-                        <button id="shopping-cart-button" @click="isOpenCart = !isOpenCart">
-                            <x-feathericon-shopping-cart class="text-white hover:text-orange-500" />
+                        <button class="relative" id="shopping-cart-button" @click="isOpenCart = !isOpenCart">
+                            <livewire:button-cart />
+
                         </button>
                         <div class="relative" x-data="{ isOpenUser: false }">
-                            <button @click="isOpenUser = !isOpenUser">
+                            <button class="relative" @click="isOpenUser = !isOpenUser">
                                 <x-feathericon-user class="text-white hover:text-orange-500" />
                             </button>
                             <div class="absolute right-0 z-50 mt-2 w-48 rounded-md bg-white shadow-lg" x-show="isOpenUser" @click.away="isOpenUser = false">
@@ -103,7 +104,7 @@
                     animi!
                 </p>
                 <a class="mx-4 mt-5 rounded-md bg-orange-500 px-4 py-2 text-base font-bold text-white hover:bg-orange-600 sm:mx-8 sm:px-6 sm:py-3 sm:text-lg md:mx-16 md:px-8 md:py-4 md:text-xl lg:mx-28"
-                    href="#">Beli Sekarang</a>
+                    href="#products">Beli Sekarang</a>
             </main>
         </section>
         <!--Hero Section end-->

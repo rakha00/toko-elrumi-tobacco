@@ -16,9 +16,9 @@
         @livewireStyles
     </head>
 
-    <body class="bg-slate-950">
+    <body class="bg-slate-950" x-data="{ isOpen: false, isOpenCart: false }">
         <!--Navbar start-->
-        <nav class="fixed left-0 right-0 top-0 z-50 border-b border-blue-950 bg-black/80" x-data="{ isOpen: false, isOpenCart: false }">
+        <nav class="fixed left-0 right-0 top-0 z-50 border-b border-blue-950 bg-black/80">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div class="flex h-20 items-center justify-between">
                     <div class="flex items-center">
@@ -39,7 +39,6 @@
                     <div class="flex items-center gap-5">
                         <button class="relative" id="shopping-cart-button" @click="isOpenCart = !isOpenCart">
                             <livewire:button-cart />
-
                         </button>
                         <div class="relative" x-data="{ isOpenUser: false }">
                             <button class="relative" @click="isOpenUser = !isOpenUser">
@@ -83,7 +82,8 @@
             </div>
 
             <!--Shopping Cart start-->
-            <div class="fixed right-0 top-0 z-20 mt-20 h-screen w-full bg-white p-4 shadow-lg transition-transform sm:w-3/4 md:w-1/2 lg:w-1/3 lg:p-5" id="shopping-cart" x-show="isOpenCart">
+            <div class="fixed right-0 top-0 z-20 mt-20 h-screen w-full bg-white p-4 shadow-lg transition-transform sm:w-3/4 md:w-1/2 lg:w-1/3 lg:p-5" id="shopping-cart" x-show="isOpenCart"
+                @click.outside="isOpenCart = false">
                 <livewire:shopping-cart />
             </div>
             <!--Shopping Cart end-->
@@ -144,14 +144,16 @@
         <!--Produk Section end-->
 
         <!-- Products Section start-->
-        <section class="py-10 md:py-20" id="products" x-data="products">
+        <section class="py-10 md:py-20" id="products">
             <h2 class="my-5 text-center text-3xl font-semibold text-white md:my-10 md:text-5xl"><span class="text-orange-500">Produk</span> Best Seller</h2>
             <p class="px-4 text-center text-base text-white md:px-0 md:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus voluptas, est voluptate corporis quo?</p>
 
             <div class="mt-5 grid grid-cols-1 gap-5 px-4 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-8 md:px-16 lg:grid-cols-4 lg:gap-10 lg:px-28 xl:grid-cols-5">
                 @foreach ($products as $product)
                     <div class="flex h-[400px] w-full flex-col items-center justify-between rounded-lg border border-white p-3 md:p-5">
-                        <livewire:add-to-cart-button :product="$product" />
+                        <div @click.stop="isOpenCart">
+                            <livewire:add-to-cart-button :product="$product" />
+                        </div>
                         <div class="flex h-48 w-48 items-center justify-center">
                             <img class="h-full w-full rounded-lg object-contain" src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" />
                         </div>

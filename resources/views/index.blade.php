@@ -99,10 +99,6 @@
                     <span class="text-white">Ngelinting</span>
                     <span class="text-orange-500">Tembakau</span>
                 </h1>
-                <p class="px-4 pt-5 text-base text-white sm:px-8 sm:text-lg md:px-16 md:text-xl lg:px-28 lg:text-2xl">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit,
-                    animi!
-                </p>
                 <a class="mx-4 mt-5 rounded-md bg-orange-500 px-4 py-2 text-base font-bold text-white hover:bg-orange-600 sm:mx-8 sm:px-6 sm:py-3 sm:text-lg md:mx-16 md:px-8 md:py-4 md:text-xl lg:mx-28"
                     href="#products">Beli Sekarang</a>
             </main>
@@ -120,8 +116,7 @@
                 <div class="w-full px-0 text-center md:w-1/2 md:px-10 md:text-left">
                     <h3 class="mb-4 text-xl font-bold text-white md:text-2xl">Kenapa memilih produk kami?</h3>
                     <p class="text-base text-white md:text-lg">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id,
-                        reiciendis.
+                    Selamat datang di Elrumi Tobacco, tempat terbaik untuk mendapatkan tembakau berkualitas dan berbagai kebutuhan merokok Anda. Kami berdedikasi untuk menyediakan produk tembakau pilihan dengan cita rasa khas yang sesuai dengan selera para penikmat sejati.
                     </p>
                 </div>
             </div>
@@ -146,7 +141,6 @@
         <!-- Products Section start-->
         <section class="py-10 md:py-20" id="products" x-data="products">
             <h2 class="my-5 text-center text-3xl font-semibold text-white md:my-10 md:text-5xl"><span class="text-orange-500">Produk</span> Best Seller</h2>
-            <p class="px-4 text-center text-base text-white md:px-0 md:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem voluptatibus voluptas, est voluptate corporis quo?</p>
 
             <div class="mt-5 grid grid-cols-1 gap-5 px-4 sm:grid-cols-2 md:mt-10 md:grid-cols-3 md:gap-8 md:px-16 lg:grid-cols-4 lg:gap-10 lg:px-28 xl:grid-cols-5">
                 @foreach ($products as $product)

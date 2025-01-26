@@ -113,7 +113,7 @@
         <main class="flex flex-col items-start justify-center h-screen text-start">
             <h1
                 class="px-4 text-4xl font-bold text-white sm:px-8 sm:text-5xl md:px-16 md:text-6xl lg:px-28 lg:text-7xl">
-                <span class="text-white">TEST</span>
+                <span class="text-white">Mari</span>
                 <br>
                 <span class="text-white">Ngelinting</span>
                 <span class="text-orange-500">Tembakau</span>
